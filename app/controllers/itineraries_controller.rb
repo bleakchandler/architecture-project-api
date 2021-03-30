@@ -29,6 +29,11 @@ class ItinerariesController < ApplicationController
         render json: ItinerarySerializer.update(@itinerary)
     end
 
+    def destroy
+        @itinerary = Itinerary.find(params[:id])    
+        @itinerary.destroy
+    end
+
     private
 
     def itinerary_params
