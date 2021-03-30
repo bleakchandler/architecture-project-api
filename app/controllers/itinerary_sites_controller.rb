@@ -9,4 +9,7 @@ class ItinerarySitesController < ApplicationController
         @itinerary_sites = ItinerarySites.find(params[:id])
         render json: @itinerary_sites
     end    
+
+
+   
 end
