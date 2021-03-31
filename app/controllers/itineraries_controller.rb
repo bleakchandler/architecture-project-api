@@ -13,25 +13,27 @@ class ItinerariesController < ApplicationController
     def new
         @itinerary = Itinerary.new
 
-        render json: ItinerarySerializer.new(@itinerary)
+        render json: @itinerary
     end
 
     def create
         @itinerary = Itinerary.create(itinerary_params)
 
-        render json: ItinerarySerializer.create(@itinerary)
+        render json: @itinerary
     end
 
     def update
         @itinerary = Itinerary.find(params[:id])
         @itinerary.update(itinerary_params)
 
-        render json: ItinerarySerializer.update(@itinerary)
+        render json: @itinerary
     end
 
     def destroy
-        @itinerary = Itinerary.find(params[:id])    
+        @itinerary = Itinerary.find(params[:id])  
+        # binding.pry  
         @itinerary.destroy
+        render json: {}
     end
 
     private
