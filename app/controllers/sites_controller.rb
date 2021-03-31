@@ -13,20 +13,20 @@ class SitesController < ApplicationController
     def new
         @site = Site.new
 
-        render json: SiteSerializer.new(site)
+        render json: @site
     end
 
     def create
         @site = Site.create(site_params)
 
-        render json: SiteSerializer.create(@site)
+        render json: @site
     end
 
     def update
         @site = Site.find(params[:id])
         @site.update(site_params)
 
-        render json: SiteSerializer.update(@site)
+        render json: @site
     end
 
     private

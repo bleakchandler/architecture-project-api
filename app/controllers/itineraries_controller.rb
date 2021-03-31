@@ -31,9 +31,7 @@ class ItinerariesController < ApplicationController
 
     def destroy
         @itinerary = Itinerary.find(params[:id])  
-        # binding.pry  
         @itinerary.destroy
-        render json: {}
     end
 
     private
