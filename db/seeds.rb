@@ -32,7 +32,7 @@ west = Site.create(name: "VIA 57 West", description: "Designed by starchitect, B
 
 bleak = User.create(name: "Bleak")
 
-bleaks_itinerary = Itinerary.create(description: "Test Itinerary", name:"Bleak's Itinerary", user: bleak)
+bleaks_itinerary = Itinerary.create(description: "Test Itinerary", name:"Bleak's Itinerary", user: bleak, date: "today")
 
 itinerary_site_1 = ItinerarySite.create(name: "Itinerary Site 1", site: the_shed, itinerary: bleaks_itinerary)
 

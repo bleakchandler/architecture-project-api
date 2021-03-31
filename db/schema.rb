@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_03_29_154623) do
 
   create_table "itineraries", force: :cascade do |t|
-    t.date "date"
+    t.string "date"
     t.string "description"
     t.string "name"
     t.integer "user_id", null: false
