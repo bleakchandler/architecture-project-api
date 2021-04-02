@@ -23,6 +23,11 @@ class ItinerarySitesController < ApplicationController
         render json: @itinerary_site
     end
 
+    def destroy
+        @itinerary_site = ItinerarySite.find(params[:id])  
+        @itinerary_site.destroy
+    end
+
     def update
         @itinerary_site = ItinerarySite.find(params[:id])
         @itinerary_site.update(itinerary_site_params)
